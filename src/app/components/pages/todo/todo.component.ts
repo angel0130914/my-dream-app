@@ -25,7 +25,13 @@ todoItems: TodoItem[] =[{
     id: 4,
     value: 'debug and code style',
     done: false
-  }];
+  },{
+    id: 5,
+    value: 'git hub',
+    done: true
+  }
+  ];
+
 
   constructor() {}
 
