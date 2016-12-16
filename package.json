@@ -4,12 +4,12 @@
     "license": "MIT",
     "angular-cli": {},
     "scripts": {
-        "start": "concurrently \"tsc -w\" \"nodemon ./bin/www\" ",
+        "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\" ",
+        "lite": "lite-server",
+        "postinstall": "npm run install",
         "tsc": "tsc",
         "tsc:w": "tsc -w",
-        "prod": "NODE_ENV=production ./bin/www",
-        "build:prod": "node bin/bundler.js --prod",
-        "postinstall": "npm run build:prod"
+        "typings": "typings"
     },
     "repository": {
         "url": "https://github.com/angel0130914/my-dream-app"
