@@ -4,11 +4,12 @@
     "license": "MIT",
     "angular-cli": {},
     "scripts": {
-        "start": "ng serve",
-        "lint": "tslint \"src/**/*.ts\"",
-        "test": "ng test",
-        "pree2e": "webdriver-manager update",
-        "e2e": "protractor"
+        "start": "concurrently \"tsc -w\" \"nodemon ./bin/www\" ",
+        "tsc": "tsc",
+        "tsc:w": "tsc -w",
+        "prod": "NODE_ENV=production ./bin/www",
+        "build:prod": "node bin/bundler.js --prod",
+        "postinstall": "npm run build:prod"
     },
     "repository": {
         "url": "https://github.com/angel0130914/my-dream-app"
