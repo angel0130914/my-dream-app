@@ -10,6 +10,6 @@ export class NavbarComponent {
   private projectName:string;
 
   constructor(){
-    this.projectName ='浴火鳳凰';
+    this.projectName ='Phoenix';
 }
 }
