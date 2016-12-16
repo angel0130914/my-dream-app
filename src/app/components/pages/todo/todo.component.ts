@@ -23,7 +23,7 @@ todoItems: TodoItem[] =[{
     done: true
   },{
     id: 4,
-    value: 'debug and code style',
+    value: 'database',
     done: false
   },{
     id: 5,

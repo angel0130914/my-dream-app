@@ -1,22 +1,22 @@
+<h4>
+    {{ 'Time: ' + getDate() }}
+    <h4>
 
-<h4>{{ 'Time: ' + getDate() }}<h4>
-
-<input type="text" [(ngModel)]="todoText" [placeholder]="placeholderText" />
-<button (click)="addTodo($event)">增加</button>
+        <input type="text" [(ngModel)]="todoText" [placeholder]="placeholderText" />
+        <button (click)="addTodo($event)">增加</button>
 
 
-<ul>
-    <li *ngFor="let item of items">
-      <label htmlFor="chk_{{item.id}}">
-        <input id="chk_{{item.id}}" type="checkbox" [checked]="item.done" (click)="chkItem(item)"> ({{item.id}}){{ item.value }}
-      </label>
-      |
-      <a (click)="delItem(item)">刪除</a>
-      <span *ngIf="item.done">(已完成)</span>
-    </li>
-</ul>
+        <ul>
+            <li *ngFor="let item of items">
+                <label htmlFor="chk_{{item.id}}">
+        <input id="chk_{{item.id}}" type="checkbox" [(ngModel)]="item.done" (click)="chkItem(item)"> ({{item.id}}){{ item.value }}
+      </label> |
+                <a (click)="delItem(item)">刪除</a>
+                <span *ngIf="item.done">(已完成)</span>
+            </li>
+        </ul>
 
-  <!--
+        <!--
 <ul>
   <li><label for="chk_1"><input id="chk_1" type="checkbox">Todo Item 1</label> | <a href="#">刪除</a></li>
 </ul>
